@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0866ff">
+  <title>Backend Test | Content Bravio</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="testing-page" data-page="testing">
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <nav class="nav" aria-label="Testing navigation">
+      <a class="brand nav-link" href="index.html" aria-label="Back to Content Bravio home">
+        <img class="brand-mark" src="images/logo.png" alt="Content Bravio logo">
+        <span>CONTENT BRAVIO</span>
+      </a>
+      <div class="navlinks">
+        <a class="nav-btn nav-link" href="index.html">← Main Website</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="testing-shell">
+    <section class="testing-hero">
+      <div class="eyebrow">DEVELOPMENT AREA</div>
+      <h1>Backend Test Lab.</h1>
+      <p>This page is for testing the path from the Content Bravio frontend to the backend API and then to the database. It uses the same design system and JavaScript file as the main website.</p>
+      <div class="backend-status" aria-live="polite">
+        <span class="status-dot" id="statusDot"></span>
+        <span class="backend-status-text" id="statusText">Backend not connected yet</span>
+      </div>
+    </section>
+
+    <div class="backend-grid">
+      <section class="card backend-card">
+        <h2>Add Client</h2>
+        <p class="page-subtitle">This will eventually send a POST request to <strong>/clients</strong>.</p>
+        <form id="clientForm" class="form-stack">
+          <div class="field">
+            <label for="name">Client name</label>
+            <input id="name" name="name" autocomplete="name" placeholder="e.g. Alex Smith" required>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" autocomplete="organization" placeholder="e.g. Bravio Media" required>
+          </div>
+          <div class="backend-actions">
+            <button class="btn primary" type="submit">Add Client</button>
+            <button class="btn secondary" id="checkBackend" type="button">Check Connection</button>
+          </div>
+        </form>
+        <div class="backend-message" id="backendMessage" aria-live="polite"></div>
+        <div class="code-note">BACKEND_URL is configured once near the top of script.js.</div>
+      </section>
+
+      <section class="card backend-card">
+        <div class="records-head">
+          <h2>Database Records</h2>
+          <button class="btn secondary" id="refreshClients" type="button">Refresh</button>
+        </div>
+        <p class="page-subtitle">This will eventually load records using GET <strong>/clients</strong>.</p>
+        <div class="client-list" id="clients">
+          <div class="empty-state">No database connection yet. The page is ready for it.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Content Bravio — Development Test Lab</span>
+    <a href="index.html">Back to main website</a>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
