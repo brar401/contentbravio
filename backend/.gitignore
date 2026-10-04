@@ -1,0 +1,5 @@
+# Local backend environment and database
+.venv/
+__pycache__/
+*.py[cod]
+contentbravio.db
