@@ -19,6 +19,7 @@
       </button>
       <div class="navlinks">
         <button class="nav-btn active" data-page="home" type="button">Home</button>
+        <a class="nav-btn nav-link" href="#contact">Contact me</a>
         <button class="nav-btn" data-page="arcade" type="button">Arcade</button>
         <button class="nav-btn" data-page="quiz" type="button">Quiz Lab</button>
         <button class="nav-btn" data-page="doodle" type="button">Doodle</button>
@@ -38,6 +39,7 @@
           <p>Content Bravio is supposedly a short-form content & growth agency. Today, however, this website has become an unnecessary interactive playground because normal “coming soon” pages are boring.</p>
           <div class="hero-actions">
             <button class="btn primary" data-go="arcade" type="button">Enter the arcade</button>
+            <a class="btn secondary nav-link" href="#contact">Let's talk</a>
             <button class="btn secondary" id="surpriseMe" type="button">Surprise me</button>
             <button class="btn yellow" id="panicButton" type="button">Do not press</button>
           </div>
@@ -243,10 +245,45 @@
         </article>
       </div>
     </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-intro">
+        <div class="eyebrow">LET'S MAKE SOMETHING GOOD</div>
+        <h2 id="contact-title">Contact me.</h2>
+        <p>Got a project in mind, a content idea, or just want to say hello? Tell me a little about it and let's start a conversation.</p>
+        <div class="contact-email-card">
+          <span class="contact-email-label">Prefer to email directly?</span>
+          <a href="mailto:davinderpalbrar401@gmail.com">davinderpalbrar401@gmail.com</a>
+        </div>
+      </div>
+      <form class="card contact-form" action="https://formsubmit.co/davinderpalbrar401@gmail.com" method="POST" aria-labelledby="contact-title">
+        <input type="hidden" name="_subject" value="New message from Content Bravio">
+        <input type="hidden" name="_template" value="table">
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="contact-website">Leave this field empty</label>
+          <input id="contact-website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="contact-name">Your name <span>(required)</span></label>
+          <input id="contact-name" type="text" name="name" autocomplete="name" maxlength="120" pattern=".*\S.*" title="Please enter your name." required>
+        </div>
+        <div class="field">
+          <label for="contact-email">Your email <span>(required)</span></label>
+          <input id="contact-email" type="email" name="email" autocomplete="email" maxlength="254" required>
+        </div>
+        <div class="field">
+          <label for="contact-message">Your message <span>(required)</span></label>
+          <textarea id="contact-message" name="message" rows="6" maxlength="5000" placeholder="Tell me what you're thinking..." required></textarea>
+        </div>
+        <p class="contact-form-note" id="contact-send-note">Complete the spam check on the next page to send your message.</p>
+        <button class="btn primary contact-submit" type="submit" aria-describedby="contact-send-note">Send message <span aria-hidden="true">↗</span></button>
+        <p class="contact-provider">Messages are handled by <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a>.</p>
+      </form>
+    </section>
   </main>
 
   <footer>
     <span>© 2026 Content Bravio — Short-Form Content & Growth Agency</span>
+    <a href="#contact">Contact me</a>
     <span>Built with shared HTML, CSS & JavaScript — plus an unreasonable number of buttons.</span>
   </footer>
 
@@ -266,3 +303,4 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+

@@ -49,7 +49,7 @@ function initMainSite() {
         window.scrollTo({top:0, behavior:'smooth'});
         addFeed(`Visited the ${name} section. Excellent use of company time.`);
       }
-      $$('[data-page]').forEach(b => b.addEventListener('click', () => goPage(b.dataset.page)));
+      $$('.nav-btn[data-page]').forEach(b => b.addEventListener('click', () => goPage(b.dataset.page)));
       $$('[data-go]').forEach(b => b.addEventListener('click', () => goPage(b.dataset.go)));
       $('.nav-home').addEventListener('click', () => goPage('home'));
       $('#randomPage').addEventListener('click', () => goPage(pick(['home','arcade','quiz','doodle','studio'])));
@@ -325,7 +325,10 @@ function initMainSite() {
         keyBuffer.push(k.length===1?k.toLowerCase():k); if(keyBuffer.length>konami.length) keyBuffer.shift();
         if(konami.every((v,i)=>keyBuffer[i]===v)) unlockKonami();
       }
-      window.addEventListener('keydown',e=>feedKey(e.key));
+      function isEditingText(target) {
+        return target instanceof Element && target.closest('input, textarea, select, [contenteditable]');
+      }
+      window.addEventListener('keydown',e=>{ if (!isEditingText(e.target)) feedKey(e.key); });
       $$('.key').forEach(k=>k.addEventListener('click',()=>feedKey(k.dataset.key)));
       function unlockKonami(){
         keyBuffer=[]; const overlay=$('#konami');overlay.classList.add('show');
@@ -336,7 +339,7 @@ function initMainSite() {
 
       // Tiny easter egg: typing BRAVIO anywhere
       let typed='';
-      window.addEventListener('keypress',e=>{ if(/^[a-z]$/i.test(e.key)){typed=(typed+e.key.toLowerCase()).slice(-6); if(typed==='bravio'){showModal('You typed BRAVIO', 'Secret handshake accepted. Your browser is now 7% more charismatic.'); achieve('Brand Loyalist','Typed the magic word.');}}});
+      window.addEventListener('keypress',e=>{ if(isEditingText(e.target)) return; if(/^[a-z]$/i.test(e.key)){typed=(typed+e.key.toLowerCase()).slice(-6); if(typed==='bravio'){showModal('You typed BRAVIO', 'Secret handshake accepted. Your browser is now 7% more charismatic.'); achieve('Brand Loyalist','Typed the magic word.');}}});
 
       setTimeout(()=>achieve('Still Here','You stayed long enough for the website to become emotionally attached.'),45000);
     })();
@@ -465,3 +468,4 @@ function initBackendTester() {
   apiReady();
   if (BACKEND_URL) loadClients();
 }
+
