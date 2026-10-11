@@ -512,6 +512,16 @@
     .contact-email-card { margin-top: 28px; padding: 22px; border: 1px solid var(--border); border-radius: 20px; background: #fff; }
     .contact-email-label { display: block; margin-bottom: 8px; color: #526c8c; font-size: 14px; }
     .contact-email-card a { color: #0757d8; font-weight: 800; overflow-wrap: anywhere; text-underline-offset: 4px; }
+    .contact-socials { margin-top: 26px; }
+    .contact-socials h3 { margin: 0 0 12px; color: var(--ink); font-size: 16px; }
+    .social-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .social-links a { min-height: 48px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #0757d8; background: #fff; border: 1px solid #b3c8e6; border-radius: 14px; text-decoration: none; font-size: 15px; font-weight: 800; }
+    .social-links a:hover { background: #e7f0ff; border-color: var(--blue); }
+    .footer-socials { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; }
+    .footer-socials a { display: inline-flex; align-items: center; min-height: 44px; color: #315078; font-weight: 750; text-underline-offset: 4px; }
+    .footer-socials a:hover { color: #0757d8; }
+    .social-links a:focus-visible, .footer-socials a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    .social-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     .contact-form { display: grid; gap: 18px; padding: clamp(22px, 4vw, 36px); min-width: 0; }
     .contact-form .field label { color: var(--ink); font-size: 14px; }
     .contact-form .field label span { color: #526c8c; font-weight: 500; }
