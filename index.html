@@ -7,6 +7,7 @@
   <title>Content Bravio — The Internet Playground</title>
   <link rel="icon" type="image/png" href="images/contentbravio@logo.png">
   <link rel="stylesheet" href="style.css?v=20261010-contact">
+  <link rel="stylesheet" href="form-lab.css?v=20261011-forms">
 </head>
 <body data-page="main">
   <div class="noise"></div>
@@ -20,6 +21,7 @@
       <div class="navlinks">
         <button class="nav-btn active" data-page="home" type="button">Home</button>
         <a class="nav-btn nav-link" href="#contact">Contact me</a>
+        <a class="nav-btn nav-link" href="#form-lab">Form lab</a>
         <button class="nav-btn" data-page="arcade" type="button">Arcade</button>
         <button class="nav-btn" data-page="quiz" type="button">Quiz Lab</button>
         <button class="nav-btn" data-page="doodle" type="button">Doodle</button>
@@ -254,6 +256,7 @@
           <span class="contact-email-label">Prefer to email directly?</span>
           <a href="mailto:davinderpalbrar401@gmail.com">davinderpalbrar401@gmail.com</a>
         </div>
+        <a class="contact-lab-link" href="#form-lab">Help test different contact forms <span aria-hidden="true">↓</span></a>
       </div>
       <form class="card contact-form" action="https://formsubmit.co/davinderpalbrar401@gmail.com" method="POST" aria-labelledby="contact-title">
         <input type="hidden" name="_subject" value="New message from Content Bravio">
@@ -279,6 +282,326 @@
         <p class="contact-provider">Messages are handled by <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a>.</p>
       </form>
     </section>
+    <section class="form-lab" id="form-lab" aria-labelledby="form-lab-title">
+      <div class="lab-hero">
+        <div class="eyebrow">CONTENT BRAVIO · FORM LAB</div>
+        <h2 id="form-lab-title">One inbox.<br>A few ways to say hello.</h2>
+        <p>Help me try different ways to receive questions. Pick a method below, send a real test message, and tell me how it felt. The <a href="#contact">original contact form</a> is still available above.</p>
+        <nav class="lab-quicklinks" aria-label="Form test methods">
+          <a href="#test-instant">Instant send</a><a href="#test-attachment">With a file</a><a href="#test-web3forms">Web3Forms</a><a href="#test-formspree">Formspree</a><a href="#test-formspark">Formspark</a><a href="#test-email-app">Email app</a>
+        </nav>
+      </div>
+      <div class="lab-instructions">
+        <p><strong>For testers:</strong> choose a method marked ready. Check the result after submitting, then let me know which felt easiest. Each test includes the method and a reference so I can match it with the email. Forms marked “Setup needed” are previews until connected.</p>
+        <a href="https://contentbravio.com/#form-lab">Link to share ↗</a>
+      </div>
+      <noscript><p class="lab-availability">JavaScript is off. The original contact form and the attachment test still work. For direct email, <a href="mailto:davinderpalbrar401@gmail.com">open your email app</a>.</p></noscript>
+      <div class="lab-grid">
+        <article class="card lab-card" id="test-instant" data-provider-card="instant">
+          <div class="lab-card-top"><span class="lab-number">TEST 01</span><span class="lab-badge" data-state="ready">Ready to test</span></div>
+          <h3>FormSubmit · instant</h3>
+          <p class="lab-description">Send a question and stay on this page. Compare this with the original form’s separate spam-check page.</p>
+          <div class="lab-meta"><a href="https://formsubmit.co/documentation" target="_blank" rel="noopener noreferrer">Unlimited submissions</a></div>
+          <details class="lab-example" open>
+            <summary>Try this method</summary>
+          <form class="lab-form" id="lab-instant-form" data-provider="instant" data-method="FormSubmit instant" data-kind="ajax" method="POST" action="https://formsubmit.co/davinderpalbrar401@gmail.com" aria-label="FormSubmit · instant test form">
+            <fieldset disabled>
+              <legend class="lab-sr-only">Send a test using FormSubmit · instant</legend>
+              <input type="hidden" name="test_method" value="FormSubmit instant">
+              <input type="hidden" name="test_reference" value="">
+              <input type="hidden" name="_subject" data-subject value="[Bravio form lab] FormSubmit instant">
+              <input type="hidden" name="_template" value="table">
+              <div class="lab-honeypot" aria-hidden="true">
+                <label for="lab-instant-website">Leave this empty</label>
+                <input id="lab-instant-website" type="text" name="_honey" data-honeypot tabindex="-1" autocomplete="off">
+              </div>
+              <div class="lab-field-row">
+                <div class="field">
+                  <label for="lab-instant-name">Your name <span>(required)</span></label>
+                  <input id="lab-instant-name" name="name" type="text" autocomplete="name" maxlength="120" pattern=".*\S.*" required>
+                </div>
+                <div class="field">
+                  <label for="lab-instant-email">Your email <span>(required)</span></label>
+                  <input id="lab-instant-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lab-instant-device">Testing on <span>(optional)</span></label>
+                <select id="lab-instant-device" name="device">
+                  <option value="Not specified">Choose a device</option>
+                  <option>Phone</option><option>Laptop / desktop</option><option>Tablet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lab-instant-message">Your question or message <span>(required)</span></label>
+                <textarea id="lab-instant-message" name="message" rows="4" maxlength="5000" placeholder="Ask a question, say hello, or tell me how this form felt to use." required></textarea>
+              </div>
+              <p class="lab-help" id="lab-instant-note">The result appears here. Davinder can confirm whether the email arrived.</p>
+              <button class="btn primary" type="submit" aria-describedby="lab-instant-note">Send without leaving</button>
+            </fieldset>
+            <p class="lab-status" id="lab-instant-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          </form>
+          </details>
+          <p class="lab-privacy">Submitting sends these details to FormSubmit for delivery to Davinder.</p>
+        </article>
+
+        <article class="card lab-card" id="test-attachment" data-provider-card="attachment">
+          <div class="lab-card-top"><span class="lab-number">TEST 02</span><span class="lab-badge" data-state="ready">Ready to test</span></div>
+          <h3>FormSubmit · attachment</h3>
+          <p class="lab-description">Send a message with a small image or PDF. Useful for trying screenshots, briefs, and supporting documents.</p>
+          <div class="lab-meta"><a href="https://formsubmit.co/documentation" target="_blank" rel="noopener noreferrer">Unlimited submissions · 10 MB maximum file size</a></div>
+          <details class="lab-example" open>
+            <summary>Try this method</summary>
+          <form class="lab-form" id="lab-attachment-form" data-provider="attachment" data-method="FormSubmit attachment" data-kind="native" method="POST" action="https://formsubmit.co/davinderpalbrar401@gmail.com" enctype="multipart/form-data" aria-label="FormSubmit · attachment test form">
+            <fieldset>
+              <legend class="lab-sr-only">Send a test using FormSubmit · attachment</legend>
+              <input type="hidden" name="test_method" value="FormSubmit attachment">
+              <input type="hidden" name="test_reference" value="">
+              <input type="hidden" name="_subject" data-subject value="[Bravio form lab] FormSubmit attachment">
+              <input type="hidden" name="_template" value="table">
+              <div class="lab-honeypot" aria-hidden="true">
+                <label for="lab-attachment-website">Leave this empty</label>
+                <input id="lab-attachment-website" type="text" name="_honey" data-honeypot tabindex="-1" autocomplete="off">
+              </div>
+              <div class="lab-field-row">
+                <div class="field">
+                  <label for="lab-attachment-name">Your name <span>(required)</span></label>
+                  <input id="lab-attachment-name" name="name" type="text" autocomplete="name" maxlength="120" pattern=".*\S.*" required>
+                </div>
+                <div class="field">
+                  <label for="lab-attachment-email">Your email <span>(required)</span></label>
+                  <input id="lab-attachment-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lab-attachment-device">Testing on <span>(optional)</span></label>
+                <select id="lab-attachment-device" name="device">
+                  <option value="Not specified">Choose a device</option>
+                  <option>Phone</option><option>Laptop / desktop</option><option>Tablet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lab-attachment-message">Your question or message <span>(required)</span></label>
+                <textarea id="lab-attachment-message" name="message" rows="4" maxlength="5000" placeholder="Ask a question, say hello, or tell me how this form felt to use." required></textarea>
+              </div>
+              <div class="field">
+                <label for="lab-attachment-file">Attach a file <span>(required)</span></label>
+                <input id="lab-attachment-file" type="file" name="attachment" accept=".png,.jpg,.jpeg,.pdf,image/png,image/jpeg,application/pdf" aria-describedby="lab-attachment-file-note" required>
+                <p class="lab-help" id="lab-attachment-file-note">One JPG, PNG, or PDF, up to 10 MB. A small sample screenshot works well.</p>
+              </div>
+              <p class="lab-help" id="lab-attachment-note">You’ll continue to FormSubmit to complete the spam check and see its result.</p>
+              <button class="btn primary" type="submit" aria-describedby="lab-attachment-note">Continue to spam check</button>
+            </fieldset>
+            <p class="lab-status" id="lab-attachment-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          </form>
+          </details>
+          <p class="lab-privacy">Submitting sends these details and the attachment to FormSubmit for delivery to Davinder.</p>
+        </article>
+
+        <article class="card lab-card" id="test-web3forms" data-provider-card="web3forms">
+          <div class="lab-card-top"><span class="lab-number">TEST 03</span><span class="lab-badge" data-state="pending">Setup needed</span></div>
+          <h3>Web3Forms</h3>
+          <p class="lab-description">A different provider with a monthly free allowance. Test its email layout and how smoothly the submission reaches your inbox.</p>
+          <div class="lab-meta"><a href="https://web3forms.com/pricing" target="_blank" rel="noopener noreferrer">250 submissions / month</a></div>
+          <p class="lab-availability">The owner needs to verify the inbox and add a Web3Forms access key. This form cannot send yet. <a href="#form-lab-setup">Setup steps</a></p>
+          <details class="lab-example">
+            <summary>Preview this form</summary>
+          <form class="lab-form" id="lab-web3forms-form" data-provider="web3forms" data-method="Web3Forms" data-kind="native" method="POST" action="https://api.web3forms.com/submit" aria-label="Web3Forms test form">
+            <fieldset disabled>
+              <legend class="lab-sr-only">Send a test using Web3Forms</legend>
+              <input type="hidden" name="test_method" value="Web3Forms">
+              <input type="hidden" name="test_reference" value="">
+              <input type="hidden" name="subject" data-subject value="[Bravio form lab] Web3Forms">
+              <input type="hidden" name="access_key" value="">
+              <div class="lab-honeypot" aria-hidden="true">
+                <label for="lab-web3forms-website">Leave this empty</label>
+                <input id="lab-web3forms-website" type="checkbox" name="botcheck" data-honeypot tabindex="-1" autocomplete="off">
+              </div>
+              <div class="lab-field-row">
+                <div class="field">
+                  <label for="lab-web3forms-name">Your name <span>(required)</span></label>
+                  <input id="lab-web3forms-name" name="name" type="text" autocomplete="name" maxlength="120" pattern=".*\S.*" required>
+                </div>
+                <div class="field">
+                  <label for="lab-web3forms-email">Your email <span>(required)</span></label>
+                  <input id="lab-web3forms-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lab-web3forms-device">Testing on <span>(optional)</span></label>
+                <select id="lab-web3forms-device" name="device">
+                  <option value="Not specified">Choose a device</option>
+                  <option>Phone</option><option>Laptop / desktop</option><option>Tablet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lab-web3forms-message">Your question or message <span>(required)</span></label>
+                <textarea id="lab-web3forms-message" name="message" rows="4" maxlength="5000" placeholder="Ask a question, say hello, or tell me how this form felt to use." required></textarea>
+              </div>
+              <p class="lab-help" id="lab-web3forms-note">Once connected, Web3Forms handles the submission and shows its result.</p>
+              <button class="btn primary" type="submit" aria-describedby="lab-web3forms-note">Send with Web3Forms</button>
+            </fieldset>
+            <p class="lab-status" id="lab-web3forms-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          </form>
+          </details>
+          <p class="lab-privacy">Submitting sends these details to Web3Forms for delivery to Davinder.</p>
+        </article>
+
+        <article class="card lab-card" id="test-formspree" data-provider-card="formspree">
+          <div class="lab-card-top"><span class="lab-number">TEST 04</span><span class="lab-badge" data-state="pending">Setup needed</span></div>
+          <h3>Formspree</h3>
+          <p class="lab-description">Try email notifications plus a submissions dashboard. Compare the dashboard record with the message in your inbox.</p>
+          <div class="lab-meta"><a href="https://formspree.io/plans/" target="_blank" rel="noopener noreferrer">50 submissions / month</a></div>
+          <p class="lab-availability">The owner needs a free Formspree account, a verified recipient, and a form ID. This form cannot send yet. <a href="#form-lab-setup">Setup steps</a></p>
+          <details class="lab-example">
+            <summary>Preview this form</summary>
+          <form class="lab-form" id="lab-formspree-form" data-provider="formspree" data-method="Formspree" data-kind="native" method="POST" aria-label="Formspree test form">
+            <fieldset disabled>
+              <legend class="lab-sr-only">Send a test using Formspree</legend>
+              <input type="hidden" name="test_method" value="Formspree">
+              <input type="hidden" name="test_reference" value="">
+              <input type="hidden" name="subject" data-subject value="[Bravio form lab] Formspree">
+              <div class="lab-honeypot" aria-hidden="true">
+                <label for="lab-formspree-website">Leave this empty</label>
+                <input id="lab-formspree-website" type="text" name="_gotcha" data-honeypot tabindex="-1" autocomplete="off">
+              </div>
+              <div class="lab-field-row">
+                <div class="field">
+                  <label for="lab-formspree-name">Your name <span>(required)</span></label>
+                  <input id="lab-formspree-name" name="name" type="text" autocomplete="name" maxlength="120" pattern=".*\S.*" required>
+                </div>
+                <div class="field">
+                  <label for="lab-formspree-email">Your email <span>(required)</span></label>
+                  <input id="lab-formspree-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lab-formspree-device">Testing on <span>(optional)</span></label>
+                <select id="lab-formspree-device" name="device">
+                  <option value="Not specified">Choose a device</option>
+                  <option>Phone</option><option>Laptop / desktop</option><option>Tablet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lab-formspree-message">Your question or message <span>(required)</span></label>
+                <textarea id="lab-formspree-message" name="message" rows="4" maxlength="5000" placeholder="Ask a question, say hello, or tell me how this form felt to use." required></textarea>
+              </div>
+              <p class="lab-help" id="lab-formspree-note">Once connected, Formspree handles any spam check and shows its result.</p>
+              <button class="btn primary" type="submit" aria-describedby="lab-formspree-note">Send with Formspree</button>
+            </fieldset>
+            <p class="lab-status" id="lab-formspree-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          </form>
+          </details>
+          <p class="lab-privacy">Submitting sends these details to Formspree for delivery to Davinder.</p>
+        </article>
+
+        <article class="card lab-card" id="test-formspark" data-provider-card="formspark">
+          <div class="lab-card-top"><span class="lab-number">TEST 05</span><span class="lab-badge" data-state="pending">Setup needed</span></div>
+          <h3>Formspark</h3>
+          <p class="lab-description">Try another provider’s notification emails and saved submissions. Its free allowance is a starter balance rather than a monthly reset.</p>
+          <div class="lab-meta"><a href="https://formspark.io/pricing" target="_blank" rel="noopener noreferrer">250 submissions total · does not renew monthly</a></div>
+          <p class="lab-availability">The owner needs a free Formspark account and a form ID with email notifications enabled. This form cannot send yet. <a href="#form-lab-setup">Setup steps</a></p>
+          <details class="lab-example">
+            <summary>Preview this form</summary>
+          <form class="lab-form" id="lab-formspark-form" data-provider="formspark" data-method="Formspark" data-kind="native" method="POST" aria-label="Formspark test form">
+            <fieldset disabled>
+              <legend class="lab-sr-only">Send a test using Formspark</legend>
+              <input type="hidden" name="test_method" value="Formspark">
+              <input type="hidden" name="test_reference" value="">
+              <input type="hidden" name="_email.subject" data-subject value="[Bravio form lab] Formspark">
+              <div class="lab-honeypot" aria-hidden="true">
+                <label for="lab-formspark-website">Leave this empty</label>
+                <input id="lab-formspark-website" type="checkbox" name="_honeypot" data-honeypot tabindex="-1" autocomplete="off">
+              </div>
+              <div class="lab-field-row">
+                <div class="field">
+                  <label for="lab-formspark-name">Your name <span>(required)</span></label>
+                  <input id="lab-formspark-name" name="name" type="text" autocomplete="name" maxlength="120" pattern=".*\S.*" required>
+                </div>
+                <div class="field">
+                  <label for="lab-formspark-email">Your email <span>(required)</span></label>
+                  <input id="lab-formspark-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lab-formspark-device">Testing on <span>(optional)</span></label>
+                <select id="lab-formspark-device" name="device">
+                  <option value="Not specified">Choose a device</option>
+                  <option>Phone</option><option>Laptop / desktop</option><option>Tablet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lab-formspark-message">Your question or message <span>(required)</span></label>
+                <textarea id="lab-formspark-message" name="message" rows="4" maxlength="5000" placeholder="Ask a question, say hello, or tell me how this form felt to use." required></textarea>
+              </div>
+              <p class="lab-help" id="lab-formspark-note">Once connected, Formspark processes the form and shows its result.</p>
+              <button class="btn primary" type="submit" aria-describedby="lab-formspark-note">Send with Formspark</button>
+            </fieldset>
+            <p class="lab-status" id="lab-formspark-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          </form>
+          </details>
+          <p class="lab-privacy">Submitting sends these details to Formspark for delivery to Davinder.</p>
+        </article>
+
+        <article class="card lab-card" id="test-email-app" data-provider-card="email-app">
+          <div class="lab-card-top"><span class="lab-number">TEST 06</span><span class="lab-badge" data-state="ready">Email app required</span></div>
+          <h3>Your email app</h3>
+          <p class="lab-description">Use your own mail app to send the same kind of question. Compare the experience with the hosted form services.</p>
+          <div class="lab-meta">No form-service quota · your mail provider’s limits apply</div>
+          <details class="lab-example" open>
+            <summary>Try this method</summary>
+          <form class="lab-form" id="lab-email-app-form" data-provider="email-app" data-method="Email app" data-kind="mailto" method="POST" aria-label="Your email app test form">
+            <fieldset disabled>
+              <legend class="lab-sr-only">Send a test using Your email app</legend>
+              <input type="hidden" name="test_method" value="Email app">
+              <input type="hidden" name="test_reference" value="">
+              <div class="lab-honeypot" aria-hidden="true">
+                <label for="lab-email-app-website">Leave this empty</label>
+                <input id="lab-email-app-website" type="text" name="website_check" data-honeypot tabindex="-1" autocomplete="off">
+              </div>
+              <div class="lab-field-row">
+                <div class="field">
+                  <label for="lab-email-app-name">Your name <span>(required)</span></label>
+                  <input id="lab-email-app-name" name="name" type="text" autocomplete="name" maxlength="120" pattern=".*\S.*" required>
+                </div>
+                <div class="field">
+                  <label for="lab-email-app-email">Your email <span>(required)</span></label>
+                  <input id="lab-email-app-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lab-email-app-device">Testing on <span>(optional)</span></label>
+                <select id="lab-email-app-device" name="device">
+                  <option value="Not specified">Choose a device</option>
+                  <option>Phone</option><option>Laptop / desktop</option><option>Tablet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lab-email-app-message">Your question or message <span>(required)</span></label>
+                <textarea id="lab-email-app-message" name="message" rows="4" maxlength="5000" placeholder="Ask a question, say hello, or tell me how this form felt to use." required></textarea>
+              </div>
+              <p class="lab-help" id="lab-email-app-note">This prepares a draft. You must press Send in your email app to deliver it.</p>
+              <button class="btn primary" type="submit" aria-describedby="lab-email-app-note">Open email draft</button>
+            </fieldset>
+            <p class="lab-status" id="lab-email-app-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          </form>
+          </details>
+          <p class="lab-privacy">Your email app and email provider handle this message.</p>
+        </article>
+      </div>
+      <details class="lab-owner" id="form-lab-setup">
+        <summary>Owner setup · connect the other free services</summary>
+        <p>These three providers need their own verified destination before they can send mail. Use <strong>davinderpalbrar401@gmail.com</strong>, choose the free plan, and enable email notifications.</p>
+        <ol>
+          <li><a href="https://app.web3forms.com/" target="_blank" rel="noopener noreferrer">Web3Forms</a>: verify your email, create a form, and copy its public access key.</li>
+          <li><a href="https://formspree.io/register" target="_blank" rel="noopener noreferrer">Formspree</a>: create a free account and a form, confirm the recipient, and copy the form endpoint.</li>
+          <li><a href="https://dashboard.formspark.io/" target="_blank" rel="noopener noreferrer">Formspark</a>: create a free account and a form, turn on email notifications, and copy its action URL.</li>
+        </ol>
+        <p>Send those three public form identifiers to the person updating this site, or add them to <code>forms-config.js</code> in the repository and publish the change. Use the Formspree and Formspark IDs from the end of their URLs. Never use an account password or private API key.</p>
+        <p>After connecting a provider, send one test and check the inbox and spam folder. A provider accepting a submission does not prove that its email arrived.</p>
+      </details>
+      <p class="lab-plan-date">Free-plan information checked 11 October 2026. Limits are shared with other forms on the same provider account where applicable and may change. Follow the provider links for current details. FormSubmit instant and attachment are two tests of the same service; the email-app method uses your own mail provider.</p>
+    </section>
   </main>
 
   <footer>
@@ -301,6 +624,8 @@
     <div><h2>BRAVIO OVERDRIVE</h2><p style="font-size:22px">Secret mode unlocked. Your productivity has officially left the chat.</p><button class="btn yellow" id="closeKonami" type="button" style="pointer-events:auto">Return to Earth</button></div>
   </div>
   <script src="script.js?v=20261010-contact" defer></script>
+  <script src="forms-config.js?v=20261011-forms" defer></script>
+  <script src="form-lab.js?v=20261011-forms" defer></script>
 </body>
 </html>
 
