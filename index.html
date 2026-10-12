@@ -7,7 +7,7 @@
   <title>Content Bravio — The Internet Playground</title>
   <link rel="icon" type="image/png" href="images/contentbravio@logo.png">
   <link rel="stylesheet" href="style.css?v=20261011-social">
-  <link rel="stylesheet" href="form-lab.css?v=20261011-forms">
+  <link rel="stylesheet" href="form-lab.css?v=20261012-sheets">
 </head>
 <body data-page="main">
   <div class="noise"></div>
@@ -294,18 +294,27 @@
     <section class="form-lab" id="form-lab" aria-labelledby="form-lab-title">
       <div class="lab-hero">
         <div class="eyebrow">CONTENT BRAVIO · FORM LAB</div>
-        <h2 id="form-lab-title">One inbox.<br>A few ways to say hello.</h2>
+        <h2 id="form-lab-title">Your questions.<br>A few ways to say hello.</h2>
         <p>Help me try different ways to receive questions. Pick a method below, send a real test message, and tell me how it felt. The <a href="#contact">original contact form</a> is still available above.</p>
         <nav class="lab-quicklinks" aria-label="Form test methods">
-          <a href="#test-instant">Instant send</a><a href="#test-attachment">With a file</a><a href="#test-web3forms">Web3Forms</a><a href="#test-formspree">Formspree</a><a href="#test-formspark">Formspark</a><a href="#test-email-app">Email app</a>
+          <a href="#test-google-sheets">Google Sheets</a><a href="#test-instant">Instant send</a><a href="#test-attachment">With a file</a><a href="#test-web3forms">Web3Forms</a><a href="#test-formspree">Formspree</a><a href="#test-formspark">Formspark</a><a href="#test-email-app">Email app</a>
         </nav>
       </div>
       <div class="lab-instructions">
-        <p><strong>For testers:</strong> choose a method marked ready. Check the result after submitting, then let me know which felt easiest. Each test includes the method and a reference so I can match it with the email. Forms marked “Setup needed” are previews until connected.</p>
+        <p><strong>For testers:</strong> choose a method marked ready. Check the result after submitting, then let me know which felt easiest. Each test includes the method and a reference so I can find it in the email or response sheet. Forms marked “Setup needed” are previews until connected.</p>
         <a href="https://contentbravio.com/#form-lab">Link to share ↗</a>
       </div>
       <noscript><p class="lab-availability">JavaScript is off. The original contact form and the attachment test still work. For direct email, <a href="mailto:davinderpalbrar401@gmail.com">open your email app</a>.</p></noscript>
       <div class="lab-grid">
+        <article class="card lab-card lab-card-wide" id="test-google-sheets" aria-labelledby="sheets-title">
+          <div class="lab-card-top"><span class="lab-number">TEST 07</span><span class="lab-badge" data-state="ready">Ready to test</span></div>
+          <h3 id="sheets-title">Google Sheets · enquiry</h3>
+          <p class="lab-description">Send a question straight to our response sheet. Choose an enquiry type and look for your saved reference after submitting. No automatic email is sent to you; replies are personal.</p>
+          <p class="lab-meta">Custom Content Bravio form · Powered by Google Apps Script</p>
+          <p class="lab-embed-help" id="sheets-help">If the form does not load below, <a href="https://script.google.com/macros/s/AKfycbzf_jLe4jzTiDvkoNqlKIoke2GaIi60t3IWiO2MbsoJoWi__RvTP2QmpQnpjpsbNEZX/exec" target="_blank" rel="noopener noreferrer">open the form in a new tab ↗</a>.</p>
+          <iframe class="lab-sheets-frame" src="https://script.google.com/macros/s/AKfycbzf_jLe4jzTiDvkoNqlKIoke2GaIi60t3IWiO2MbsoJoWi__RvTP2QmpQnpjpsbNEZX/exec" title="Content Bravio enquiry form — save to Google Sheets" aria-describedby="sheets-help" loading="lazy" width="100%" height="1000"></iframe>
+          <p class="lab-privacy">Submitting sends your details to Content Bravio through Google Apps Script for storage in Google Sheets and inclusion in an email summary to the owner.</p>
+        </article>
         <article class="card lab-card" id="test-instant" data-provider-card="instant">
           <div class="lab-card-top"><span class="lab-number">TEST 01</span><span class="lab-badge" data-state="ready">Ready to test</span></div>
           <h3>FormSubmit · instant</h3>

@@ -112,3 +112,25 @@ enabling them; native provider-hosted checks remain available where supported.
 - https://documentation.formspark.io/setup/
 - https://documentation.formspark.io/customization/notification-email.html
 - https://documentation.formspark.io/setup/spam-protection.html
+
+## Google Sheets enquiry test (12 October 2026)
+
+A separate Google Apps Script form is embedded at
+https://contentbravio.com/#test-google-sheets. The original contact form and the
+other lab tests remain available. The Google form has a full-width responsive
+card and an always-visible link to open it separately if embedding is blocked.
+Its public deployment URL appears in both the iframe and fallback link in
+`index.html`; update both when replacing the deployment.
+
+The supplied Apps Script stores enquiries in the original response spreadsheet's
+Forms tab. Quotes is untouched. The visitor receives a saved reference after a
+successful write, with no automatic visitor email. The script is configured to
+send nonempty owner summaries around 08:00, 10:00, 12:00 and 14:00 Australia/Perth;
+Google trigger times are approximate. Replies are manual.
+
+Verification: the deployed URL returned the custom form without authentication;
+its exposed functions were submitEnquiry and doGet, with no setup wrapper.
+The website integration does not itself verify a sheet write, trigger execution,
+or inbox delivery. To finish the live test, submit an enquiry with type Form test,
+confirm its reference and row in Forms, then check a scheduled owner summary.
+No real submission or email was sent during the website update.

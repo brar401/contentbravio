@@ -64,3 +64,13 @@
   .lab-field-row { grid-template-columns: 1fr; }
   .lab-quicklinks a { padding: 9px 11px; }
 }
+
+/* Google-hosted form: full-width card with a direct-link fallback. */
+.lab-card-wide { grid-column: 1 / -1; }
+.lab-embed-help { color: #526c8c; font-size: 14px; line-height: 1.7; }
+.lab-embed-help a { color: #0757d8; font-weight: 750; text-underline-offset: 3px; }
+.lab-sheets-frame { display: block; width: 100%; height: 1000px; border: 1px solid var(--border); border-radius: 16px; background: #f5f9ff; }
+@media (max-width: 420px) {
+  #test-google-sheets { padding: 16px; }
+  .lab-sheets-frame { height: 1150px; }
+}
